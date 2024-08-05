@@ -23,7 +23,7 @@ export default {
         async createUser() {
             try {
                 // Call the update API
-                const response = await fetch(`http://localhost:8000/api/users/create`, {
+                const response = await fetch(`https://vue-user-list.onrender.com/api/users/create`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

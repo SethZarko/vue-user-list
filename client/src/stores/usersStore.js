@@ -14,7 +14,7 @@ export const useUsersStore = defineStore('users', {
   actions: {
     async fetchUsers() {
       try {
-        const response = await fetch('http://localhost:8000/api/users/all');
+        const response = await fetch('https://vue-user-list.onrender.com/api/users/all');
         const data = await response.json();
         
         this.allUsers = data;
@@ -24,7 +24,7 @@ export const useUsersStore = defineStore('users', {
     },
     async fetchUserById(userId) {
       try {
-        const response = await fetch(`http://localhost:8000/api/users/${userId}`);
+        const response = await fetch(`https://vue-user-list.onrender.com/api/users/${userId}`);
         const data = await response.json();
 
         this.user = data;
@@ -35,7 +35,7 @@ export const useUsersStore = defineStore('users', {
     },
     async fetchPaginatedUsers(page, limit) {
       try {
-        const response = await fetch(`http://localhost:8000/api/users/paginate?page=${page}&limit=${limit}`);
+        const response = await fetch(`https://vue-user-list.onrender.com/api/users/paginate?page=${page}&limit=${limit}`);
         const data = await response.json();
         
         this.users = data.users;

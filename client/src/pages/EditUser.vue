@@ -26,7 +26,7 @@ export default {
     async updateUser() {
       try {
         // Call the update API
-        const response = await fetch(`http://localhost:8000/api/users/${this.id}`, {
+        const response = await fetch(`https://vue-user-list.onrender.com/api/users/${this.id}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json'

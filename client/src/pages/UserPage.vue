@@ -25,7 +25,7 @@ export default {
   methods: {
     async deleteUser(userId) {
       try {
-        const response = await fetch(`http://localhost:8000/api/users/${userId}`, {
+        const response = await fetch(`https://vue-user-list.onrender.com/api/users/${userId}`, {
           method: 'DELETE'
         });
 
